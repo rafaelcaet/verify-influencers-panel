@@ -1,10 +1,13 @@
 import Link from "next/link";
+import { BrandLogo } from "./BrandLogo";
 
 export function NavBar() {
   return (
-    <header className="flex py-6 shadow-lg fixed top-0 w-full z-10 bg-background/95">
-      <nav className="flex items-center gap-10 container font-semibold">
-        <Link href="/" className="mr-auto"></Link>
+    <header className="flex py-6 shadow-lg fixed top-0 w-full z-10 dark:text-white text-black bg-background/95">
+      <nav className="flex items-center gap-10 container font-medium">
+        <Link href="/" className="flex gap-3 m-auto">
+          <BrandLogo />
+        </Link>
         <Link className="text-lg" href="/#leaderboards">
           Leaderboards
         </Link>
