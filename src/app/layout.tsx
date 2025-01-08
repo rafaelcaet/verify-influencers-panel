@@ -30,7 +30,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans bg-background`}
       >
-        {" "}
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -38,7 +37,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <NavBar />
-          {children}
+          <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>
