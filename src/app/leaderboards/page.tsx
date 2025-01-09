@@ -88,17 +88,23 @@ export default function Leaderboards() {
 
         {/* TABLE SECTION */}
         <section className="my-10">
-          <div className="rounded-xl border border-gray-[#121212] bg-[#121212] overflow-hidden">
+          <div className="rounded-xl border border-gray-[#121212] dark:bg-[#121212] bg-gray-100 overflow-hidden">
             <Table className="rounded-xl shadow">
               <TableHeader>
                 <TableRow>
-                  <TableHead className="w-[100px]">RANK</TableHead>
-                  <TableHead>INFLUENCER</TableHead>
-                  <TableHead>CATEGORY</TableHead>
-                  <TableHead className="text-left">TRUST SCORE</TableHead>
-                  <TableHead className="text-left">TREND</TableHead>
-                  <TableHead className="text-left">FOLLOWERS</TableHead>
-                  <TableHead className="text-left">VERIFY CLAIMS</TableHead>
+                  <TableHead className="w-[100px] text-xs">RANK</TableHead>
+                  <TableHead className="w-[250px] text-xs">
+                    INFLUENCER
+                  </TableHead>
+                  <TableHead className="text-xs">CATEGORY</TableHead>
+                  <TableHead className="text-left text-xs">
+                    TRUST SCORE
+                  </TableHead>
+                  <TableHead className="text-left text-xs">TREND</TableHead>
+                  <TableHead className="text-left text-xs">FOLLOWERS</TableHead>
+                  <TableHead className="text-left text-xs">
+                    VERIFY CLAIMS
+                  </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -125,6 +131,91 @@ export default function Leaderboards() {
                     <div className="flex items-center gap-3">
                       <Avatar>
                         <AvatarImage src="https://i.pravatar.cc/150?img=1" />
+                        <AvatarFallback>CN</AvatarFallback>
+                      </Avatar>
+                      <p>ShadCn</p>
+                    </div>
+                  </TableCell>
+                  <TableCell>Credit Card</TableCell>
+                  <TableCell className="text-left text-xs">$250.00</TableCell>
+                  <TableCell className="text-left text-xs">$250.00</TableCell>
+                  <TableCell className="text-left text-xs">$250.00</TableCell>
+                  <TableCell className="text-left text-xs">$250.00</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium p-5">#1</TableCell>
+                  <TableCell>
+                    <div className="flex items-center gap-3">
+                      <Avatar>
+                        <AvatarImage src="https://i.pravatar.cc/150?img=10" />
+                        <AvatarFallback>CN</AvatarFallback>
+                      </Avatar>
+                      <p>ShadCn</p>
+                    </div>
+                  </TableCell>
+                  <TableCell>Credit Card</TableCell>
+                  <TableCell className="text-left text-xs">$250.00</TableCell>
+                  <TableCell className="text-left text-xs">$250.00</TableCell>
+                  <TableCell className="text-left text-xs">$250.00</TableCell>
+                  <TableCell className="text-left text-xs">$250.00</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium p-5">#1</TableCell>
+                  <TableCell>
+                    <div className="flex items-center gap-3">
+                      <Avatar>
+                        <AvatarImage src="https://i.pravatar.cc/150?img=9" />
+                        <AvatarFallback>CN</AvatarFallback>
+                      </Avatar>
+                      <p>ShadCn</p>
+                    </div>
+                  </TableCell>
+                  <TableCell>Credit Card</TableCell>
+                  <TableCell className="text-left text-xs">$250.00</TableCell>
+                  <TableCell className="text-left text-xs">$250.00</TableCell>
+                  <TableCell className="text-left text-xs">$250.00</TableCell>
+                  <TableCell className="text-left text-xs">$250.00</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium p-5">#1</TableCell>
+                  <TableCell>
+                    <div className="flex items-center gap-3">
+                      <Avatar>
+                        <AvatarImage src="https://i.pravatar.cc/150?img=8" />
+                        <AvatarFallback>CN</AvatarFallback>
+                      </Avatar>
+                      <p>ShadCn</p>
+                    </div>
+                  </TableCell>
+                  <TableCell>Credit Card</TableCell>
+                  <TableCell className="text-left text-xs">$250.00</TableCell>
+                  <TableCell className="text-left text-xs">$250.00</TableCell>
+                  <TableCell className="text-left text-xs">$250.00</TableCell>
+                  <TableCell className="text-left text-xs">$250.00</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium p-5">#1</TableCell>
+                  <TableCell>
+                    <div className="flex items-center gap-3">
+                      <Avatar>
+                        <AvatarImage src="https://i.pravatar.cc/150?img=7" />
+                        <AvatarFallback>CN</AvatarFallback>
+                      </Avatar>
+                      <p>ShadCn</p>
+                    </div>
+                  </TableCell>
+                  <TableCell>Credit Card</TableCell>
+                  <TableCell className="text-left text-xs">$250.00</TableCell>
+                  <TableCell className="text-left text-xs">$250.00</TableCell>
+                  <TableCell className="text-left text-xs">$250.00</TableCell>
+                  <TableCell className="text-left text-xs">$250.00</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium p-5">#1</TableCell>
+                  <TableCell>
+                    <div className="flex items-center gap-3">
+                      <Avatar>
+                        <AvatarImage src="https://i.pravatar.cc/150?img=6" />
                         <AvatarFallback>CN</AvatarFallback>
                       </Avatar>
                       <p>ShadCn</p>
