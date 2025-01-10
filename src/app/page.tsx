@@ -1,3 +1,12 @@
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
 export default function Home() {
   return (
     <>
@@ -9,17 +18,22 @@ export default function Home() {
           Make it easier for people to find honest, evidence-based guidance.
         </p>
       </section>
-      <section className="bg-primary text-primary-foreground">
-        <div className="container py-16 flex flex-col gap-16 px-8 md:px-16">
-          <h2 className="text-3xl text-center text-balance">
-            Trusted by the top mordern companies
-          </h2>
-        </div>
-      </section>
+
+      {/* PRICING */}
       <section id="pricing" className="px-8 py-16 bg-accent/5">
         <h2 className="text-4xl text-center text-balance font-semibold mb-8">
           Pricing software which pays for itself 20x over
         </h2>
+        <Card>
+          <CardHeader>
+            <div className="text-accent font-semibold mb-8">TESTE</div>
+            <CardTitle className="text-xl font-bold"> $1 /month</CardTitle>
+            <CardDescription>pricing page visits/month</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Button className="text-lg w-full rounded-lg">Get Started</Button>
+          </CardContent>
+        </Card>
       </section>
     </>
   );
