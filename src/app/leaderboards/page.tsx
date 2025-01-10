@@ -43,44 +43,55 @@ export default function Leaderboards() {
 
         {/* CARDS SECTION */}
         <section className="grid grid-cols-3 container gap-7 mt-10">
-          {cardProps.map((prop, index) => (
-            <>
-              <Card className="dark:bg-[#121212] bg-gray-100">
-                <CardContent>
-                  <div className="flex gap-3 items-center mt-6" key={index}>
-                    <span>{prop.icon}</span>
-                    <div className="flex flex-col">
-                      <p className="text-2xl font-bold">{prop.text}</p>
-                      <p className="text-sm text-gray-500">
-                        {prop.description}
-                      </p>
-                    </div>
+          {cardProps.map((prop) => (
+            <Card key={prop.text} className="dark:bg-[#121212] bg-gray-100">
+              <CardContent>
+                <div className="flex gap-3 items-center mt-6">
+                  <span>{prop.icon}</span>
+                  <div className="flex flex-col">
+                    <p className="text-2xl font-bold">{prop.text}</p>
+                    <p className="text-sm text-gray-500">{prop.description}</p>
                   </div>
-                </CardContent>
-              </Card>
-            </>
+                </div>
+              </CardContent>
+            </Card>
           ))}
         </section>
 
         {/* FILTER SECTION */}
         <section className="flex container gap-2 mt-10">
-          <div className="border rounded-full p-3 text-sm dark:bg-[#121212] bg-gray-100 hover:bg-green-300 dark:hover:bg-green-600">
+          <div
+            key="all"
+            className="border rounded-full cursor-pointer p-3 text-sm dark:bg-[#121212] bg-gray-100 hover:bg-green-300 dark:hover:bg-green-600"
+          >
             {" "}
             All
           </div>
-          <div className="border rounded-full p-3 text-sm dark:bg-[#121212] bg-gray-100 hover:bg-green-300 dark:hover:bg-green-600">
+          <div
+            key="nutrition"
+            className="border rounded-full cursor-pointer p-3 text-sm dark:bg-[#121212] bg-gray-100 hover:bg-green-300 dark:hover:bg-green-600"
+          >
             {" "}
             Nutrition
           </div>
-          <div className="border rounded-full p-3 text-sm dark:bg-[#121212] bg-gray-100 hover:bg-green-300 dark:hover:bg-green-600">
+          <div
+            key="fitness"
+            className="border rounded-full cursor-pointer p-3 text-sm dark:bg-[#121212] bg-gray-100 hover:bg-green-300 dark:hover:bg-green-600"
+          >
             {" "}
             Fitness
           </div>
-          <div className="border rounded-full p-3 text-sm dark:bg-[#121212] bg-gray-100 hover:bg-green-300 dark:hover:bg-green-600">
+          <div
+            key="medicine"
+            className="border rounded-full cursor-pointer p-3 text-sm dark:bg-[#121212] bg-gray-100 hover:bg-green-300 dark:hover:bg-green-600"
+          >
             {" "}
             Medicine
           </div>
-          <div className="border rounded-full p-3 text-sm dark:bg-[#121212] bg-gray-100 hover:bg-green-300 dark:hover:bg-green-600">
+          <div
+            key="mental-health"
+            className="border rounded-full cursor-pointer p-3 text-sm dark:bg-[#121212] bg-gray-100 hover:bg-green-300 dark:hover:bg-green-600"
+          >
             {" "}
             Mental Health
           </div>

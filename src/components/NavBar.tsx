@@ -24,7 +24,7 @@ export function NavBar() {
         <Link className="text-base hover:text-green-400" href="#">
           Contact
         </Link>
-        <Link className="text-base hover:text-green-400" href="#">
+        <Link className="text-base hover:text-green-400" href="/admin">
           Admin
         </Link>
         <span className="text-base hover:text-green-400">Sign out</span>
