@@ -48,7 +48,7 @@ export default function Admin() {
               </Card>
             </div>
             <div className="flex flex-col pl-9 max-w-[565px] mt-5 gap-1">
-              <p className="p-1 text-sm">Time Range</p>
+              <p className="p-1 text-sm font-light">Time Range</p>
               <div className="grid grid-cols-2 gap-2">
                 <Card className=" flex dark:hover:bg-green-300/20 dark:hover:border-green-400 dark:hover:text-green-400 dark:bg-[#171717] items-center justify-center p-2">
                   <p className=" text-sm">Last Week</p>
