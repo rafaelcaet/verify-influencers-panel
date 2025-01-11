@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { NavBar } from "@/components/NavBar";
+import LoadingPage from "./LoadingPage";
 
 export default function ClientWrapper({
   children,
@@ -16,7 +17,11 @@ export default function ClientWrapper({
   }, []);
 
   if (!mounted) {
-    return <div className="loading">waiting...</div>;
+    return (
+      <div className="loading">
+        <LoadingPage />
+      </div>
+    );
   }
 
   return (
