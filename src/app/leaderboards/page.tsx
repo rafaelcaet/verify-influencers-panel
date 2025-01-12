@@ -28,6 +28,14 @@ const cardProps = [
   },
 ];
 
+const filtersLabel = [
+  "All",
+  "Nutrition",
+  "Fitness",
+  "Medicine",
+  "Mental Health",
+];
+
 export default function Leaderboards() {
   return (
     <>
@@ -60,41 +68,14 @@ export default function Leaderboards() {
 
         {/* FILTER SECTION */}
         <section className="flex container gap-2 mt-10">
-          <div
-            key="all"
-            className="border rounded-full cursor-pointer p-3 text-sm dark:bg-[#121212] bg-gray-100 hover:bg-green-300 dark:hover:bg-green-600"
-          >
-            {" "}
-            All
-          </div>
-          <div
-            key="nutrition"
-            className="border rounded-full cursor-pointer p-3 text-sm dark:bg-[#121212] bg-gray-100 hover:bg-green-300 dark:hover:bg-green-600"
-          >
-            {" "}
-            Nutrition
-          </div>
-          <div
-            key="fitness"
-            className="border rounded-full cursor-pointer p-3 text-sm dark:bg-[#121212] bg-gray-100 hover:bg-green-300 dark:hover:bg-green-600"
-          >
-            {" "}
-            Fitness
-          </div>
-          <div
-            key="medicine"
-            className="border rounded-full cursor-pointer p-3 text-sm dark:bg-[#121212] bg-gray-100 hover:bg-green-300 dark:hover:bg-green-600"
-          >
-            {" "}
-            Medicine
-          </div>
-          <div
-            key="mental-health"
-            className="border rounded-full cursor-pointer p-3 text-sm dark:bg-[#121212] bg-gray-100 hover:bg-green-300 dark:hover:bg-green-600"
-          >
-            {" "}
-            Mental Health
-          </div>
+          {filtersLabel.map((item, index) => (
+            <div
+              key={index}
+              className="border rounded-full cursor-pointer p-3 text-sm dark:bg-[#121212] bg-gray-100 hover:bg-green-300 dark:hover:bg-green-600"
+            >
+              {item}
+            </div>
+          ))}
         </section>
 
         {/* TABLE SECTION */}

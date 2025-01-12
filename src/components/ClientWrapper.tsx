@@ -17,22 +17,15 @@ export default function ClientWrapper({
   }, []);
 
   if (!mounted) {
-    return (
-      <div className="loading">
-        <LoadingPage />
-      </div>
-    );
+    return <LoadingPage />;
   }
 
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      // disableTransitionOnChange
-    >
-      <NavBar />
-      {children}
-    </ThemeProvider>
+    <>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <NavBar />
+        {children}
+      </ThemeProvider>
+    </>
   );
 }

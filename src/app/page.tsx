@@ -29,7 +29,7 @@ export default function Home() {
       {/* PRICING */}
       <div className="w-full overflow-hidden bg-background py-2">
         <div className="flex animate-marquee space-x-12">
-          {Array.from({ length: logoCount }).map((_, index) => (
+          {Array.from({ length: logoCount * 2 }).map((_, index) => (
             <BrandLogo key={index} />
           ))}
         </div>
