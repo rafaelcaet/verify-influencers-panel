@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { NavBar } from "@/components/NavBar";
-import LoadingPage from "./LoadingPage";
 
 export default function ClientWrapper({
   children,
@@ -11,21 +10,23 @@ export default function ClientWrapper({
   children: React.ReactNode;
 }) {
   const [mounted, setMounted] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setMounted(true);
+    setTimeout(() => setLoading(false), 1000);
   }, []);
-
-  if (!mounted) {
-    return <LoadingPage />;
-  }
 
   return (
     <>
-      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-        <NavBar />
-        {children}
-      </ThemeProvider>
+      {loading && " "}
+
+      {mounted && (
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <NavBar />
+          {children}
+        </ThemeProvider>
+      )}
     </>
   );
 }
