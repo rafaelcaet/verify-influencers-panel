@@ -42,7 +42,7 @@ export default function Home() {
           {Object.entries(plans).map(([key, item]: [Key, IPlan]) => (
             <Card
               key={key}
-              className={`w-72 ${
+              className={`w-72 dark:bg-[#121212] ${
                 item.name === "Professional Plan" ? "border-green-400" : ""
               }`}
             >

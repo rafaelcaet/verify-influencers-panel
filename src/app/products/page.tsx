@@ -35,7 +35,7 @@ export default function Products() {
               )}
             </div>
             <Card
-              className={`flex w-auto items-center ${
+              className={`flex w-auto items-center dark:bg-[#121212] ${
                 item.name === "Professional Plan" ? "border-green-400" : ""
               }`}
             >
