@@ -1,10 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { plans } from "../../utils/plans";
 import { Button } from "@/components/ui/button";
 import { Verified } from "lucide-react";
@@ -12,7 +6,7 @@ import { Verified } from "lucide-react";
 export default function Products() {
   return (
     <>
-      <main className="mt-32 container p-4">
+      <main className="mt-32 container p-4 ">
         <div className="max-w-[768px]">
           <h1 className="text-4xl font-bold">
             Unlock the Power of Verified Health Advice

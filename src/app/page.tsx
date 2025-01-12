@@ -63,7 +63,7 @@ export default function Home() {
                 </CardTitle>
                 <CardDescription>
                   {item.features.map((text, index) => (
-                    <p key={index}>- {text}</p>
+                    <p key={index}>• {text}</p>
                   ))}
                 </CardDescription>
               </CardHeader>

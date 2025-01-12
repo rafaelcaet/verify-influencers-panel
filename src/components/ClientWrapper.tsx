@@ -29,7 +29,7 @@ export default function ClientWrapper({
       attribute="class"
       defaultTheme="system"
       enableSystem
-      disableTransitionOnChange
+      // disableTransitionOnChange
     >
       <NavBar />
       {children}

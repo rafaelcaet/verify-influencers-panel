@@ -39,16 +39,16 @@ export function NavBar() {
         {topics.map((topic, index) => (
           <Link
             key={index}
-            className="text-base hover:text-green-400"
+            className="text-base font-semibold hover:text-green-500"
             href={`${topic.path}`}
           >
             {topic.name}
           </Link>
         ))}
-        <span className="text-base hover:text-green-400">Sign out</span>
-        <div className="ml-10">
-          <ModeToggle />
-        </div>
+        <span className="ml-5 text-base border border-green-500 rounded-lg p-2 text-green-500 hover:text-green-400 cursor-pointer">
+          Login / Sign in
+        </span>
+        <ModeToggle />
       </nav>
     </header>
   );

@@ -9,6 +9,10 @@ export default {
   ],
   theme: {
     extend: {
+      transitionProperty: {
+        "bg-color": "background-color",
+        "text-color": "color",
+      },
       animation: {
         marquee: "marquee 20s linear infinite",
       },
@@ -85,5 +89,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  // plugins: [require("tailwindcss-animate")],
 } satisfies Config;
