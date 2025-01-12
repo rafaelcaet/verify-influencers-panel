@@ -9,6 +9,10 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "custom-gradient":
+          "linear-gradient(to-br, hsl(130,40%,45%) 0%, hsl(150,35%,35%) 40%, hsl(210,30%,20%) 100%)",
+      },
       transitionProperty: {
         "bg-color": "background-color",
         "text-color": "color",

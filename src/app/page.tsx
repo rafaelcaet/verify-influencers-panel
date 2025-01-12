@@ -1,3 +1,5 @@
+"use client";
+
 import { BrandLogo } from "@/components/BrandLogo";
 import { Button } from "@/components/ui/button";
 import {
@@ -7,21 +9,31 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Key } from "react";
+import { Key, useState } from "react";
 import { IPlan } from "../interfaces/IPlan";
 import { plans } from "../utils/plans";
 import Link from "next/link";
+import { ProgressDemo } from "@/components/ProgressBar";
 
 const logoCount = 15;
 
 export default function Home() {
+  const [loading, setLoading] = useState(false);
+
+  const handleLinkClick = (path: string) => {
+    setLoading(true);
+    setTimeout(() => {
+      window.location.href = path;
+    }, 1000);
+  };
   return (
     <>
+      {loading && <ProgressDemo />}
       <section className="mt-6 min-h-screen bg-[radial-gradient(hsl(120,50%,30%,40%),hsl(150,45%,35%,40%),hsl(var(--background))_60%)] flex items-center justify-center text-center text-balance flex-col gap-8 px-4">
-        <h1 className="text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-800">
+        <h1 className="text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-green-700 to-blue-500">
           Facts, Not Fad!
         </h1>
-        <p className="text-lg lg:text-3xl font-semibold max-w-screen-xl">
+        <p className="text-lg lg:text-2xl xl:text-3xl font-medium max-w-4xl text-white/1 leading-relaxed">
           Make it easier for people to find honest, evidence-based guidance.
         </p>
       </section>
@@ -69,7 +81,10 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <Link href="/products">
-                  <Button className="text-lg dark:bg-green-400 bg-green-500 hover:bg-green-400 dark:hover:bg-green-200 w-full rounded-lg">
+                  <Button
+                    className="text-lg dark:bg-green-400 bg-green-500 hover:bg-green-400 dark:hover:bg-green-200 w-full rounded-lg"
+                    onClick={() => handleLinkClick("/products")}
+                  >
                     Get Started
                   </Button>
                 </Link>
